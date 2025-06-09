@@ -1,10 +1,21 @@
 # MCP DEMO
 
+## Step 0: install required tools
+
+Make sure you have installed the following tools:
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+- [VSCode](https://code.visualstudio.com/)
+- [GitHub Copilot](https://github.com/features/copilot)
+
 ## Step 1: install MCP library
 
 Linux
 
 ```bash
+# Create a new directory for our project
+uv init mcp-demo
+cd mcp-demo
+
 # Create virtual environment and activate it
 uv venv
 source .venv/bin/activate
@@ -13,12 +24,16 @@ source .venv/bin/activate
 uv add "mcp[cli]"
 
 # Create our server file
-touch myname.py
+touch server.py
 ```
 
 Windows
 
 ```powershell
+# Create a new directory for our project
+uv init mcp-demo
+cd mcp-demo
+
 # Create virtual environment and activate it
 uv venv
 .venv\Scripts\activate
@@ -27,10 +42,10 @@ uv venv
 uv add mcp[cli]
 
 # Create our server file
-new-item myname.py
+new-item server.py
 ```
 
-## Step 2: importing and setting up for myname.py
+## Step 2: importing and setting up for server.py
 
 ```python
 from mcp.server.fastmcp import FastMCP
@@ -39,7 +54,7 @@ from mcp.server.fastmcp import FastMCP
 mcp = FastMCP("my name")
 ```
 
-## Step 3: logic for myname.py
+## Step 3: logic for server.py
 
 ```python
 @mcp.tool()
@@ -81,7 +96,7 @@ Add `mcp.json` into .vscode
                 "--directory",
                 "C:\\ABSOLUTE\\PATH\\TO\\PARENT\\FOLDER\\mcp-demo",
                 "run",
-                "myname.py"
+                "server.py"
             ]
         }
     }
