@@ -3,3 +3,4 @@
 - [DEMO1: Develop "My Name" MCP Server with Python](DEMO1.md)
 - [DMEO2: Use "My Name" MCP Server in VSCode](DEMO2.md)
 - [DEMO3: Integrate "My Name" MCP Server in Semantic Kernel](DEMO3.md)
+- [DEMO4: Change stdio to streamable-http](DEMO4.md)
