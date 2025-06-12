@@ -10,6 +10,12 @@ if __name__ == "__main__":
     mcp.run(transport="streamable-http")
 ```
 
+Run the server with the following command:
+
+```bash
+uv run server.py
+```
+
 ## Step 2: Update `client.py`
 
 In `client.py`, update the client to use the HTTP transport. This will allow it to communicate with the MCP server over HTTP.
